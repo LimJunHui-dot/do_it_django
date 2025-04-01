@@ -5,6 +5,7 @@ class Post(models.Model):
     # 문자열의 길이 제한 없이 만든다.
     content = models.TextField()
 
+    head_image = models.ImageField(upload_to='blog/images/%Y/%m/%d/', blank=True)
     # 월, 일, 시, 분, 초까지 기록해줄 수 있는 필드
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
