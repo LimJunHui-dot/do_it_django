@@ -3,6 +3,7 @@ import os
 
 class Post(models.Model):
     title = models.CharField(max_length=30)
+    hook_text = models.CharField(max_length=100, blank=True)
     # 문자열의 길이 제한 없이 만든다.
     content = models.TextField()
 
